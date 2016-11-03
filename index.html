@@ -2,88 +2,754 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Shal3v</title>
+	<title>Document</title>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<style>
-		body{
-		  width:100%; 
-		  margin:0;
-		  overflow:hidden;
-		  background:hsla(0,5%,5%,1) url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/131045/colorful-triangles2.jpg);
-		background-size:cover;
+		/* General Setting */
+		section.header--title{
+		  margin: 150px 0;
 		}
 
-		svg {
-		   width:100%;
-		   height:100vh;
+		/*  */
+
+		/* Color */
+		.color-primary{
+		  color: #f2a447;
+		}
+		.color-secondary{
+		  color: #d6d7dc;
+		}
+		.color-dark{
+		  color: #1c1e1f;
+		}
+
+
+		/* font styling */
+
+		.font-montserrat{
+		  font-family: 'Montserrat', sans-serif;
+		  font-weight: 700;
+		}
+
+		.font-playfair{
+		  font-family: 'Playfair Display', serif;
+		  font-weight: 900;
+		}
+
+		.uppercase{
+		  text-transform: uppercase;
+		  letter-spacing: .4em;
+		  font-size: .9em;
+		}
+
+		/* header--title */
+		.header--title .row{
+		  position: relative;
+		}
+		.header--title h2:after{
+		  position: absolute;
+		  
+		  bottom : 33%;
+		  left: 33%;
+		  content: '{}';
+		  font-size: 160px;
+		  font-family: "montserrat", sans-serif;
+		  color: #ebebeb;
+		  z-index: -1;
+		}
+
+		.header--title h2{
+		  font-size: 42px;
+		  letter-spacing: -.03em;
+		}
+
+		.header--title h5{
+		  
+		}
+
+		/*!---------- 36. SPACING ----------*/
+		.mr0 {
+		  margin-right: 0;
+		}
+		.mb0 {
+		  margin-bottom: 0 !important;
+		}
+		.mb8 {
+		  margin-bottom: 8px;
+		}
+		.mb16 {
+		  margin-bottom: 16px;
+		}
+		.mb24 {
+		  margin-bottom: 24px;
+		}
+		.mb30 {
+		  margin-bottom: 30px;
+		}
+		.mb32 {
+		  margin-bottom: 32px;
+		}
+		.mb40 {
+		  margin-bottom: 40px;
+		}
+		.mb48 {
+		  margin-bottom: 48px;
+		}
+		.mb56 {
+		  margin-bottom: 56px;
+		}
+		.mb64 {
+		  margin-bottom: 64px;
+		}
+		.mb72 {
+		  margin-bottom: 72px;
+		}
+		.mb80 {
+		  margin-bottom: 80px;
+		}
+		.mb88 {
+		  margin-bottom: 88px;
+		}
+		.mb96 {
+		  margin-bottom: 96px;
+		}
+		.mb104 {
+		  margin-bottom: 104px;
+		}
+		.mb112 {
+		  margin-bottom: 112px;
+		}
+		.mb120 {
+		  margin-bottom: 120px;
+		}
+		.mb160 {
+		  margin-bottom: 160px;
+		}
+		.mt0 {
+		  margin-top: 0 !important;
+		}
+		.mt8 {
+		  margin-top: 8px;
+		}
+		.mt16 {
+		  margin-top: 16px;
+		}
+		.mt24 {
+		  margin-top: 24px;
+		}
+		.mt32 {
+		  margin-top: 32px;
+		}
+		.mt40 {
+		  margin-top: 40px;
+		}
+		.mt48 {
+		  margin-top: 48px;
+		}
+		.mt56 {
+		  margin-top: 56px;
+		}
+		.mt64 {
+		  margin-top: 64px;
+		}
+		.mt72 {
+		  margin-top: 72px;
+		}
+		.mt80 {
+		  margin-top: 80px;
+		}
+		.mt88 {
+		  margin-top: 88px;
+		}
+		.mt96 {
+		  margin-top: 96px;
+		}
+		.mt104 {
+		  margin-top: 104px;
+		}
+		.mt112 {
+		  margin-top: 112px;
+		}
+		.mt120 {
+		  margin-top: 120px;
+		}
+		.mt160 {
+		  margin-top: 160px;
+		}
+		.p32 {
+		  padding: 0 32px;
+		}
+		.p24 {
+		  padding: 24px;
+		}
+		.p0 {
+		  padding: 0;
+		}
+		.pt0 {
+		  padding-top: 0;
+		}
+		.pt8 {
+		  padding-top: 8px;
+		}
+		.pt16 {
+		  padding-top: 16px;
+		}
+		.pt24 {
+		  padding-top: 24px;
+		}
+		.pt32 {
+		  padding-top: 32px;
+		}
+		.pt40 {
+		  padding-top: 40px;
+		}
+		.pt48 {
+		  padding-top: 48px;
+		}
+		.pt64 {
+		  padding-top: 64px;
+		}
+		.pt72 {
+		  padding-top: 72px;
+		}
+		.pt80 {
+		  padding-top: 80px;
+		}
+		.pt88 {
+		  padding-top: 88px;
+		}
+		.pt96 {
+		  padding-top: 96px;
+		}
+		.pt104 {
+		  padding-top: 104px;
+		}
+		.pt112 {
+		  padding-top: 112px;
+		}
+		.pt120 {
+		  padding-top: 120px;
+		}
+		.pt160 {
+		  padding-top: 160px;
+		}
+		.pt180 {
+		  padding-top: 180px;
+		}
+		.pt240 {
+		  padding-top: 240px;
+		}
+		.pb0 {
+		  padding-bottom: 0;
+		}
+		.pb8 {
+		  padding-bottom: 8px;
+		}
+		.pb16 {
+		  padding-bottom: 16px;
+		}
+		.pb24 {
+		  padding-bottom: 24px;
+		}
+		.pb32 {
+		  padding-bottom: 32px;
+		}
+		.pb40 {
+		  padding-bottom: 40px;
+		}
+		.pb48 {
+		  padding-bottom: 48px;
+		}
+		.pb56 {
+		  padding-bottom: 56px;
+		}
+		.pb64 {
+		  padding-bottom: 64px;
+		}
+		.pb72 {
+		  padding-bottom: 72px;
+		}
+		.pb80 {
+		  padding-bottom: 80px;
+		}
+		.pb88 {
+		  padding-bottom: 88px;
+		}
+		.pb96 {
+		  padding-bottom: 96px;
+		}
+		.pb104 {
+		  padding-bottom: 104px;
+		}
+		.pb112 {
+		  padding-bottom: 112px;
+		}
+		.pb120 {
+		  padding-bottom: 120px;
+		}
+		.pb160 {
+		  padding-bottom: 160px;
+		}
+		.pb180 {
+		  padding-bottom: 180px;
+		}
+		.pb240 {
+		  padding-bottom: 240px;
+		}
+		@media all and (max-width: 990px) {
+		  .mb-s-0 {
+		    margin-bottom: 0;
+		  }
+		  .mb-s-8 {
+		    margin-bottom: 8px;
+		  }
+		  .mb-s-16 {
+		    margin-bottom: 16px;
+		  }
+		  .mb-s-24 {
+		    margin-bottom: 24px;
+		  }
+		  .mb-s-32 {
+		    margin-bottom: 32px;
+		  }
+		  .mb-s-40 {
+		    margin-bottom: 40px;
+		  }
+		  .mb-s-48 {
+		    margin-bottom: 48px;
+		  }
+		  .mb-s-64 {
+		    margin-bottom: 64px;
+		  }
+		  .mb-s-72 {
+		    margin-bottom: 72px;
+		  }
+		  .mb-s-80 {
+		    margin-bottom: 80px;
+		  }
+		  .mb-s-88 {
+		    margin-bottom: 88px;
+		  }
+		  .mb-s-96 {
+		    margin-bottom: 96px;
+		  }
+		  .mb-s-104 {
+		    margin-bottom: 104px;
+		  }
+		  .mb-s-112 {
+		    margin-bottom: 112px;
+		  }
+		  .mb-s-120 {
+		    margin-bottom: 120px;
+		  }
+		}
+		@media all and (max-width: 990px) {
+		  .mb-sm-0 {
+		    margin-bottom: 0;
+		  }
+		  .mb-sm-8 {
+		    margin-bottom: 8px;
+		  }
+		  .mb-sm-16 {
+		    margin-bottom: 16px;
+		  }
+		  .mb-sm-24 {
+		    margin-bottom: 24px;
+		  }
+		  .mb-sm-32 {
+		    margin-bottom: 32px;
+		  }
+		  .mb-sm-40 {
+		    margin-bottom: 40px;
+		  }
+		  .mb-sm-48 {
+		    margin-bottom: 48px;
+		  }
+		  .mb-sm-64 {
+		    margin-bottom: 64px;
+		  }
+		  .mb-sm-72 {
+		    margin-bottom: 72px;
+		  }
+		  .mb-sm-80 {
+		    margin-bottom: 80px;
+		  }
+		  .mb-sm-88 {
+		    margin-bottom: 88px;
+		  }
+		  .mb-sm-96 {
+		    margin-bottom: 96px;
+		  }
+		  .mb-sm-104 {
+		    margin-bottom: 104px;
+		  }
+		  .mb-sm-112 {
+		    margin-bottom: 112px;
+		  }
+		  .mb-sm-120 {
+		    margin-bottom: 120px;
+		  }
+		  .mt-sm-0 {
+		    margin-top: 0 !important;
+		  }
+		  .mt-sm-8 {
+		    margin-top: 8px;
+		  }
+		  .mt-sm-16 {
+		    margin-top: 16px;
+		  }
+		  .mt-sm-24 {
+		    margin-top: 24px;
+		  }
+		  .mt-sm-32 {
+		    margin-top: 32px;
+		  }
+		  .mt-sm-40 {
+		    margin-top: 40px;
+		  }
+		  .mt-sm-48 {
+		    margin-top: 48px;
+		  }
+		  .mt-sm-56 {
+		    margin-top: 56px;
+		  }
+		  .mt-sm-64 {
+		    margin-top: 64px;
+		  }
+		  .mt-sm-72 {
+		    margin-top: 72px;
+		  }
+		  .mt-sm-80 {
+		    margin-top: 80px;
+		  }
+		  .mt-sm-88 {
+		    margin-top: 88px;
+		  }
+		  .mt-sm-96 {
+		    margin-top: 96px;
+		  }
+		  .mt-sm-104 {
+		    margin-top: 104px;
+		  }
+		  .mt-sm-112 {
+		    margin-top: 112px;
+		  }
+		  .mt-sm-120 {
+		    margin-top: 120px;
+		  }
+		  .p0-sm {
+		    padding: 0;
+		  }
+		  .pt-sm-0 {
+		    padding-top: 0;
+		  }
+		  .pt-sm-8 {
+		    padding-top: 8px;
+		  }
+		  .pt-sm-16 {
+		    padding-top: 16px;
+		  }
+		  .pt-sm-24 {
+		    padding-top: 24px;
+		  }
+		  .pt-sm-32 {
+		    padding-top: 32px;
+		  }
+		  .pt-sm-40 {
+		    padding-top: 40px;
+		  }
+		  .pt-sm-48 {
+		    padding-top: 48px;
+		  }
+		  .pt-sm-64 {
+		    padding-top: 64px;
+		  }
+		  .pt-sm-72 {
+		    padding-top: 72px;
+		  }
+		  .pt-sm-80 {
+		    padding-top: 80px;
+		  }
+		  .pt-sm-88 {
+		    padding-top: 88px;
+		  }
+		  .pt-sm-96 {
+		    padding-top: 96px;
+		  }
+		  .pt-sm-104 {
+		    padding-top: 104px;
+		  }
+		  .pt-sm-112 {
+		    padding-top: 112px;
+		  }
+		  .pt-sm-120 {
+		    padding-top: 120px;
+		  }
+		  .pt-sm-160 {
+		    padding-top: 160px;
+		  }
+		  .pb-sm-0 {
+		    padding-bottom: 0;
+		  }
+		  .pb-sm-8 {
+		    padding-bottom: 8px;
+		  }
+		  .pb-sm-16 {
+		    padding-bottom: 16px;
+		  }
+		  .pb-sm-24 {
+		    padding-bottom: 24px;
+		  }
+		  .pb-sm-32 {
+		    padding-bottom: 32px;
+		  }
+		  .pb-sm-40 {
+		    padding-bottom: 40px;
+		  }
+		  .pb-sm-48 {
+		    padding-bottom: 48px;
+		  }
+		  .pb-sm-64 {
+		    padding-bottom: 64px;
+		  }
+		  .pb-sm-72 {
+		    padding-bottom: 72px;
+		  }
+		  .pb-sm-80 {
+		    padding-bottom: 80px;
+		  }
+		  .pb-sm-88 {
+		    padding-bottom: 88px;
+		  }
+		  .pb-sm-96 {
+		    padding-bottom: 96px;
+		  }
+		  .pb-sm-104 {
+		    padding-bottom: 104px;
+		  }
+		  .pb-sm-112 {
+		    padding-bottom: 112px;
+		  }
+		  .pb-sm-120 {
+		    padding-bottom: 120px;
+		  }
+		}
+		@media all and (max-width: 767px) {
+		  .mb-xs-0 {
+		    margin-bottom: 0;
+		  }
+		  .mb-xs-8 {
+		    margin-bottom: 8px;
+		  }
+		  .mb-xs-16 {
+		    margin-bottom: 16px;
+		  }
+		  .mb-xs-24 {
+		    margin-bottom: 24px;
+		  }
+		  .mb-xs-32 {
+		    margin-bottom: 32px;
+		  }
+		  .mb-xs-40 {
+		    margin-bottom: 40px;
+		  }
+		  .mb-xs-48 {
+		    margin-bottom: 48px;
+		  }
+		  .mb-xs-64 {
+		    margin-bottom: 64px;
+		  }
+		  .mb-xs-72 {
+		    margin-bottom: 72px;
+		  }
+		  .mb-xs-80 {
+		    margin-bottom: 80px;
+		  }
+		  .mb-xs-88 {
+		    margin-bottom: 88px;
+		  }
+		  .mb-xs-96 {
+		    margin-bottom: 96px;
+		  }
+		  .mb-xs-104 {
+		    margin-bottom: 104px;
+		  }
+		  .mb-xs-112 {
+		    margin-bottom: 112px;
+		  }
+		  .mb-xs-120 {
+		    margin-bottom: 120px;
+		  }
+		  .mt-xs-0 {
+		    margin-top: 0 !important;
+		  }
+		  .mt-xs-8 {
+		    margin-top: 8px;
+		  }
+		  .mt-xs-16 {
+		    margin-top: 16px;
+		  }
+		  .mt-xs-24 {
+		    margin-top: 24px;
+		  }
+		  .mt-xs-32 {
+		    margin-top: 32px;
+		  }
+		  .mt-xs-40 {
+		    margin-top: 40px;
+		  }
+		  .mt-xs-48 {
+		    margin-top: 48px;
+		  }
+		  .mt-xs-56 {
+		    margin-top: 56px;
+		  }
+		  .mt-xs-64 {
+		    margin-top: 64px;
+		  }
+		  .mt-xs-72 {
+		    margin-top: 72px;
+		  }
+		  .mt-xs-80 {
+		    margin-top: 80px;
+		  }
+		  .mt-xs-88 {
+		    margin-top: 88px;
+		  }
+		  .mt-xs-96 {
+		    margin-top: 96px;
+		  }
+		  .mt-xs-104 {
+		    margin-top: 104px;
+		  }
+		  .mt-xs-112 {
+		    margin-top: 112px;
+		  }
+		  .mt-xs-120 {
+		    margin-top: 120px;
+		  }
+		  .p0-xs {
+		    padding: 0;
+		  }
+		  .pt-xs-0 {
+		    padding-top: 0;
+		  }
+		  .pt-xs-8 {
+		    padding-top: 8px;
+		  }
+		  .pt-xs-16 {
+		    padding-top: 16px;
+		  }
+		  .pt-xs-24 {
+		    padding-top: 24px;
+		  }
+		  .pt-xs-32 {
+		    padding-top: 32px;
+		  }
+		  .pt-xs-40 {
+		    padding-top: 40px;
+		  }
+		  .pt-xs-48 {
+		    padding-top: 48px;
+		  }
+		  .pt-xs-64 {
+		    padding-top: 64px;
+		  }
+		  .pt-xs-72 {
+		    padding-top: 72px;
+		  }
+		  .pt-xs-80 {
+		    padding-top: 80px;
+		  }
+		  .pt-xs-88 {
+		    padding-top: 88px;
+		  }
+		  .pt-xs-96 {
+		    padding-top: 96px;
+		  }
+		  .pt-xs-104 {
+		    padding-top: 104px;
+		  }
+		  .pt-xs-112 {
+		    padding-top: 112px;
+		  }
+		  .pt-xs-120 {
+		    padding-top: 120px;
+		  }
+		  .pt-xs-160 {
+		    padding-top: 160px;
+		  }
+		  .pt-xs-180 {
+		    padding-top: 180px;
+		  }
+		  .pt-xs-240 {
+		    padding-top: 240px !important;
+		  }
+		  .pb-xs-0 {
+		    padding-bottom: 0;
+		  }
+		  .pb-xs-8 {
+		    padding-bottom: 8px;
+		  }
+		  .pb-xs-16 {
+		    padding-bottom: 16px;
+		  }
+		  .pb-xs-24 {
+		    padding-bottom: 24px;
+		  }
+		  .pb-xs-32 {
+		    padding-bottom: 32px;
+		  }
+		  .pb-xs-40 {
+		    padding-bottom: 40px;
+		  }
+		  .pb-xs-48 {
+		    padding-bottom: 48px;
+		  }
+		  .pb-xs-64 {
+		    padding-bottom: 64px;
+		  }
+		  .pb-xs-72 {
+		    padding-bottom: 72px;
+		  }
+		  .pb-xs-80 {
+		    padding-bottom: 80px;
+		  }
+		  .pb-xs-88 {
+		    padding-bottom: 88px;
+		  }
+		  .pb-xs-96 {
+		    padding-bottom: 96px;
+		  }
+		  .pb-xs-104 {
+		    padding-bottom: 104px;
+		  }
+		  .pb-xs-112 {
+		    padding-bottom: 112px;
+		  }
+		  .pb-xs-120 {
+		    padding-bottom: 120px;
+		  }
+		  .pb-xs-180 {
+		    padding-bottom: 180px;
+		  }
+		  .pb-xs-240 {
+		    padding-bottom: 240px !important;
+		  }
 		}
 	</style>
-	<script>
-		window.requestAnimFrame = (function(callback) {
-		    return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame ||
-		        function(callback) {
-		            window.setTimeout(callback, 1000 / 60);
-		        };
-		})();
-
-
-		var rect = document.querySelectorAll('rect'),
-		 		    path = document.querySelectorAll('path'),
-		 		    seg = [].map.call(path,function(p){ 
-		          return p.pathSegList
-		     }),
-		 		    size = [].map.call(rect,function(r){ 
-		          return r.transform.baseVal.getItem(0) 
-		     }),
-		 		    off = [].map.call(rect,function(r){ 
-		          return r.transform.baseVal.getItem(1) 
-		     }),
-		 		    rots = [].map.call(rect,function(r){ 
-		          return r.transform.baseVal.getItem(2) 
-		     });
-
-				function radius(lays,rad){
-		    			rad = Math.max(Math.min(rad,43),0);
-		    			for (var i=5;i<15;i+=3){
-		        				var seg2 = seg[lays].getItem(i+1);
-		        				seg[lays].getItem(i).x = seg2.r1 = seg2.r2 = rad;
-		    			}
-		    			return rad;
-				}
-		//rotate
-				function rot(layer,degrees){ 
-		      rots[layer].setRotate(degrees,0,0) 
-		 }
-		//translate
-				function trans(layer,x,y){ 
-		      off[layer].setTranslate(x,y) 
-		 }
-		//scale
-				function scale(layer,scale){ 
-		      size[layer].setScale(scale,scale) 
-		 }
-		//calls
-		radius(0,35);
-		radius(1,25);
-		rot(1,35);
-		scale(0,.88)
-		//animate
-				function anim(){
-					    var t = Date.now();
-			    			trans(0,Math.sin(t/7000)*150,Math.sin(t/3000)*120);
-		    rot(1,Math.sin(t/19000)*30);
-					    window.requestAnimationFrame(anim);
-				}
-				anim();
-	</script>
 </head>
 <body>
-	<svg xmlns="http://www.w3.org/2000/svg" viewBox="-1500 -1500 3000 3000" preserveAspectRatio="xMidYMid slice">
-	<defs>
-		<pattern id="grid1" width="100" height="173.2" patternUnits="userSpaceOnUse"><path fill-rule="evenodd" d=" M0,0 H100 V173.2 H0 M25,129.9 m20,0 a20,20 0 1,0  0,0.1 M125,129.9 m20,0 a20,20 0 1,0  0,0.1 M75,43.3 m20,0 a20,20 0 1,0  0,0.1 M-25,43.3 m20,0 a20,20 0 1,0  0,0.1"/></pattern>
-		<pattern id="grid2" width="100" height="173.2" patternUnits="userSpaceOnUse"><path fill-rule="evenodd" d=" M0,0 H100 V173.2 H0 M25,129.9 m20,0 a20,20 0 1,0  0,0.1 M125,129.9 m20,0 a20,20 0 1,0  0,0.1 M75,43.3 m20,0 a20,20 0 1,0  0,0.1 M-25,43.3 m20,0 a20,20 0 1,0  0,0.1"/></pattern>
-	</defs>
-	<rect fill="url(#grid1)" x="-3000" y="-3000" width="6000" height="6000" transform="scale(0.9,0.9) translate(0,0) rotate(0)"/>
-	<rect fill="url(#grid2)" x="-3000" y="-3000" width="6000" height="6000" transform="scale(0.9,0.9) translate(0,0) rotate(0)"/>
-</svg>
+	<section class="header--title">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-sm-10 col-sm-offset-1">
+       
+        <h5 class="font-montserrat color-primary uppercase">data matters, creatives allure</h5>
+        <h2 class="font-playfair color-dark mt8">// Connacting</h2>
+      </div>
+    </div>
+  </div>
+  </div>
 </body>
 </html>

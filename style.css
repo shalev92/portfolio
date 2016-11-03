@@ -3,8 +3,9 @@ section.header--title{
   margin: 150px 0;
 }
 
-/*  */
-
+body {
+  overflow-x:hidden;
+}
 /* Color */
 .color-primary{
   color: #f2a447;
@@ -15,7 +16,6 @@ section.header--title{
 .color-dark{
   color: #1c1e1f;
 }
-
 
 /* font styling */
 
@@ -65,7 +65,8 @@ section.header--title{
   font-size: 60px;
   letter-spacing: -.03em;
 }
-  .header--info p {
-      font-size:2vw;
-    text-align: center;
-    }
+.header--info p {
+    font-size:36px;
+  text-align: center;
+  }
+}
